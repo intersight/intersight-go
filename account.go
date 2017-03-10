@@ -23,15 +23,7 @@ type Account struct {
 	Lifecycle   AccountLifecycle
 	Orientation AccountOrientation
 
-	//TrafficSource - utm_source - vendor / advertiser ID / sub channel
-	TrafficSource string
-	//TrafficChannel - utm_medium
-	TrafficChannel    TrafficChannel
-	TrafficSubChannel string
-	//TrafficCampaign - utm_name
-	TrafficCampaign string
-	//TrafficTerm - utm_term
-	TrafficTerm string
+	TrafficSource TrafficSource
 
 	ParentAccountID string
 	//AccountManager [type]accountId e.g. [technical]john, [sales]sarah

@@ -23,11 +23,12 @@ type EventSource struct {
 }
 
 type Event struct {
-	ID        string
-	EventTime time.Time
-	Source    EventSource
-	Key       string //event name | heatmap send type | ID to store properties against
-	Type      EventType
-	Data      map[string]string
-	Meta      map[string]string
+	ID            string
+	EventTime     time.Time
+	Source        EventSource
+	TrafficSource TrafficSource
+	Key           string //event name | heatmap send type | ID to store properties against
+	Type          EventType
+	Data          map[string]string
+	Meta          map[string]string
 }
