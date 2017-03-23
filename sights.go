@@ -1,7 +1,5 @@
 package intersights
 
-import "time"
-
 type SourceType string
 type SightType string
 
@@ -14,7 +12,7 @@ type SightSource struct {
 	TrackerID string `json:"t"`
 	//RequestID is a micro session the event is attached to, e.g. A single page load would have a single request ID, but many events.  Can be split with / to describe a sub request.
 	RequestID        string `json:"r"`
-	RequestStartTime time.Time `json:"rt"`
+	RequestStartTime Time `json:"rt"`
 	SourceType       SourceType `json:"st"`
 	Hostname         string `json:"h"`
 	IP               string `json:"ip"`
@@ -24,7 +22,7 @@ type SightSource struct {
 
 type Sight struct {
 	ID            string  `json:"id"`
-	SightTime     time.Time  `json:"st"`
+	SightTime     Time  `json:"st"`
 	Source        SightSource `json:"s"`
 	TrafficSource TrafficSource `json:"tr"`
 	Key           string //event name | heatmap send type | ID to store properties against  `json:"k"`
