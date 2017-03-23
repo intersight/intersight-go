@@ -1,6 +1,8 @@
-package event
+package sights
 
-import "github.com/intersight/intersight-go"
+import (
+	"github.com/intersights/intersights-go"
+)
 
 const (
 	SourceWeb       intersight.SourceType = "web"
@@ -12,11 +14,11 @@ const (
 	SourceOther     intersight.SourceType = "other"
 
 	//TypeEvent generic event
-	TypeEvent intersight.EventType = "event"
+	TypeEvent intersight.SightType = "event"
 	//TypeProperty setting a property on an entity
-	TypeProperty intersight.EventType = "property"
+	TypeProperty intersight.SightType = "property"
 	//TypeHeatmap heatmap data
-	TypeHeatmap intersight.EventType = "heatmap"
+	TypeHeatmap intersight.SightType = "heatmap"
 	//TypeForm information about a form
-	TypeForm intersight.EventType = "form"
+	TypeForm intersight.SightType = "form"
 )
