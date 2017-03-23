@@ -1,4 +1,4 @@
-package intersight
+package intersights
 
 type ProductStatus string
 type ProductType string

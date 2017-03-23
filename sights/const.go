@@ -5,20 +5,20 @@ import (
 )
 
 const (
-	SourceWeb       intersight.SourceType = "web"
-	SourceMobile    intersight.SourceType = "mobile"
-	SourceAPI       intersight.SourceType = "api"
-	SourcePhone     intersight.SourceType = "phone"
-	SourceRealWorld intersight.SourceType = "realworld"
-	SourceWebhook   intersight.SourceType = "webhook"
-	SourceOther     intersight.SourceType = "other"
+	SourceWeb       intersights.SourceType = "web"
+	SourceMobile    intersights.SourceType = "mobile"
+	SourceAPI       intersights.SourceType = "api"
+	SourcePhone     intersights.SourceType = "phone"
+	SourceRealWorld intersights.SourceType = "realworld"
+	SourceWebhook   intersights.SourceType = "webhook"
+	SourceOther     intersights.SourceType = "other"
 
 	//TypeEvent generic event
-	TypeEvent intersight.SightType = "event"
+	TypeEvent intersights.SightType = "event"
 	//TypeProperty setting a property on an entity
-	TypeProperty intersight.SightType = "property"
+	TypeProperty intersights.SightType = "property"
 	//TypeHeatmap heatmap data
-	TypeHeatmap intersight.SightType = "heatmap"
+	TypeHeatmap intersights.SightType = "heatmap"
 	//TypeForm information about a form
-	TypeForm intersight.SightType = "form"
+	TypeForm intersights.SightType = "form"
 )

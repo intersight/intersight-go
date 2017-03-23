@@ -1,12 +1,14 @@
 package domain
 
-import "github.com/intersight/intersight-go"
+import (
+	"github.com/intersights/intersights-go"
+)
 
 const (
-	StatusDeactivated intersight.DomainStatus = "deactivated"
-	StatusActive      intersight.DomainStatus = "active"
-	StatusApproval    intersight.DomainStatus = "approval"
+	StatusDeactivated intersights.DomainStatus = "deactivated"
+	StatusActive      intersights.DomainStatus = "active"
+	StatusApproval    intersights.DomainStatus = "approval"
 
-	VerifyWeb intersight.DomainVerifyMode = "web"
-	VerifyDNS intersight.DomainVerifyMode = "dns"
+	VerifyWeb intersights.DomainVerifyMode = "web"
+	VerifyDNS intersights.DomainVerifyMode = "dns"
 )

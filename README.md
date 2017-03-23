@@ -1,2 +1,2 @@
-# intersight-go
-Intersight go SDK
+# intersights-go
+Intersights go SDK

@@ -1,4 +1,4 @@
-package intersight
+package intersights
 
 import "time"
 
@@ -45,8 +45,8 @@ type Account struct {
 	HPA bool
 	//Fraud Fraudulent Account
 	Fraud bool
-	//Chargeback Account Had Chargeback
-	Chargeback bool
+	//Disputes Account Had Disputes
+	Disputes bool
 	//Discount Account Interested in Discounts
 	Discount bool
 	//Impulse Will buy impulsively

@@ -1,22 +1,24 @@
 package traffic
 
-import "github.com/intersight/intersight-go"
+import (
+	"github.com/intersights/intersights-go"
+)
 
 const (
-	ChannelSearchOrganic  intersight.TrafficChannel = "search.organic"
-	ChannelSearchPaid     intersight.TrafficChannel = "search.paid"
-	ChannelSocialMedia    intersight.TrafficChannel = "social"
-	ChannelEmailMarketing intersight.TrafficChannel = "email"
-	ChannelDirect         intersight.TrafficChannel = "direct"
-	ChannelAffiliate      intersight.TrafficChannel = "affiliate"
-	ChannelContent        intersight.TrafficChannel = "content"
-	ChannelRetargetting   intersight.TrafficChannel = "retargetting"
-	ChannelOffline        intersight.TrafficChannel = "offline"
-	ChannelPrint          intersight.TrafficChannel = "print"
-	ChannelPhone          intersight.TrafficChannel = "phone"
-	ChannelPartners       intersight.TrafficChannel = "partners"
-	ChannelIntegration    intersight.TrafficChannel = "integration"
-	ChannelWordOfMouth    intersight.TrafficChannel = "wordofmouth"
+	ChannelSearchOrganic  intersights.TrafficChannel = "search.organic"
+	ChannelSearchPaid     intersights.TrafficChannel = "search.paid"
+	ChannelSocialMedia    intersights.TrafficChannel = "social"
+	ChannelEmailMarketing intersights.TrafficChannel = "email"
+	ChannelDirect         intersights.TrafficChannel = "direct"
+	ChannelAffiliate      intersights.TrafficChannel = "affiliate"
+	ChannelContent        intersights.TrafficChannel = "content"
+	ChannelReTarget       intersights.TrafficChannel = "retarget"
+	ChannelOffline        intersights.TrafficChannel = "offline"
+	ChannelPrint          intersights.TrafficChannel = "print"
+	ChannelPhone          intersights.TrafficChannel = "phone"
+	ChannelPartners       intersights.TrafficChannel = "partners"
+	ChannelIntegration    intersights.TrafficChannel = "integration"
+	ChannelWordOfMouth    intersights.TrafficChannel = "wordofmouth"
 
 	SubChannelEmailNewsletter    = "newsletter"
 	SubChannelEmailCourse        = "course"

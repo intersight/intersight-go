@@ -1,4 +1,4 @@
-package intersight
+package intersights
 
 type TrafficChannel string
 

@@ -1,4 +1,4 @@
-package intersight
+package intersights
 
 type ProjectMode string
 type ProjectRegion string

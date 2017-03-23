@@ -1,15 +1,17 @@
 package project
 
-import "github.com/intersight/intersight-go"
+import (
+	"github.com/intersights/intersights-go"
+)
 
 const (
-	ModeDevelopment      intersight.ProjectMode = "dev"
-	ModeTesting          intersight.ProjectMode = "test"
-	ModeQualityAssurance intersight.ProjectMode = "qa"
-	ModeStaging          intersight.ProjectMode = "stage"
-	ModeProduction       intersight.ProjectMode = "prod"
+	ModeDevelopment      intersights.ProjectMode = "dev"
+	ModeTesting          intersights.ProjectMode = "test"
+	ModeQualityAssurance intersights.ProjectMode = "qa"
+	ModeStaging          intersights.ProjectMode = "stage"
+	ModeProduction       intersights.ProjectMode = "prod"
 
-	RegionUS   intersight.ProjectRegion = "us"
-	RegionEU   intersight.ProjectRegion = "eu"
-	RegionAsia intersight.ProjectRegion = "ap"
+	RegionUS   intersights.ProjectRegion = "us"
+	RegionEU   intersights.ProjectRegion = "eu"
+	RegionAsia intersights.ProjectRegion = "ap"
 )
