@@ -18,15 +18,23 @@ type SightSource struct {
 	IP               string `json:"ip"`
 	UserAgent        string `json:"ua"`
 	Interactions     map[string]int32  `json:"in"`
+	TrafficSource    TrafficSource `json:"ts"`
 }
 
 type Sight struct {
-	ID            string  `json:"id"`
-	SightTime     Time  `json:"st"`
-	Source        SightSource `json:"s"`
-	TrafficSource TrafficSource `json:"tr"`
-	Key           string //event name | heatmap send type | ID to store properties against  `json:"k"`
-	Type          SightType `json:"t"`
-	Data          map[string]string `json:"d"`
-	Meta          map[string]string `json:"m"`
+	ID        string  `json:"id"`
+	SightTime Time  `json:"t"`
+	Source    SightSource `json:"src"`
+	Type      SightType `json:"type"`
+
+	//ProfileVendor - The application responsible for generating this sight
+	ProfileVendor string `json:"pv"`
+	//ProfileID - Which profile to track the sight against
+	ProfileID string `json:"p"`
+	//Data - Used for profile property sights
+	Data map[string]string `json:"d"`
+	//Meta - Used for any meta not defined
+	Meta map[string]string `json:"m"`
+	//JsonLd - Used to describe the sight
+	JsonLd string `json:"ld"`
 }
