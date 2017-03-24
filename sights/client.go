@@ -39,6 +39,48 @@ func (c Client) Write(ctx context.Context, sight intersights.Sight) (*pbsights.S
 	rst, _ := ptypes.TimestampProto(sight.Source.RequestStartTime.Time)
 	st, _ := ptypes.TimestampProto(sight.SightTime.Time)
 
+	var sourceType pbsights.SourceType
+	var sightType pbsights.SightType
+
+	switch sight.Source.SourceType {
+	case SourceWeb:
+		sourceType = pbsights.SourceType_Web
+		break
+	case SourceMobile:
+		sourceType = pbsights.SourceType_Mobile
+		break
+	case SourceAPI:
+		sourceType = pbsights.SourceType_API
+		break
+	case SourcePhone:
+		sourceType = pbsights.SourceType_Phone
+		break
+	case SourceRealWorld:
+		sourceType = pbsights.SourceType_Real_World
+		break
+	case SourceWebhook:
+		sourceType = pbsights.SourceType_Webhook
+		break
+	case SourceOther:
+		sourceType = pbsights.SourceType_Other
+		break
+	}
+
+	switch sight.Type {
+	case TypeProperty:
+		sightType = pbsights.SightType_Property
+		break
+	case TypeEvent:
+		sightType = pbsights.SightType_Event
+		break
+	case TypeHeatmap:
+		sightType = pbsights.SightType_Heatmap
+		break
+	case TypeForm:
+		sightType = pbsights.SightType_Form
+		break
+	}
+
 	ps := &pbsights.Sight{
 		ProfileNamespace: sight.ProfileNamespace,
 		ProfileId:        sight.ProfileID,
@@ -49,7 +91,7 @@ func (c Client) Write(ctx context.Context, sight intersights.Sight) (*pbsights.S
 			TrackerId:        sight.Source.TrackerID,
 			RequestId:        sight.Source.RequestID,
 			ProfileVendor:    sight.Source.ProfileVendor,
-			SourceType:       pbsights.SourceType(sight.Source.SourceType),
+			SourceType:       sourceType,
 			Hostname:         sight.Source.Hostname,
 			Ip:               sight.Source.IP,
 			UserAgent:        sight.Source.UserAgent,
@@ -67,7 +109,7 @@ func (c Client) Write(ctx context.Context, sight intersights.Sight) (*pbsights.S
 			},
 		},
 		Time:       st,
-		Type:       pbsights.SightType(sight.Type),
+		Type:       sightType,
 		JsonLd:     sight.JsonLd,
 		Properties: sight.Data,
 		Meta:       sight.Meta,
