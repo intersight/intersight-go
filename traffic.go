@@ -11,6 +11,11 @@ type TrafficSource struct {
 	//Campaign - utm_name
 	Campaign string
 	//Term - utm_term
-	Term        string
+	Term string
+	//Creative - ID for creative used e.g. Banner ID
+	Creative string
+	//Offer - ID for any specific offer specified
+	Offer string
+	//TrackingIDs - any traffic source defined tracking IDs eg click ID
 	TrackingIDs map[int32]string
 }
