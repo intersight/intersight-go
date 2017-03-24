@@ -9,7 +9,8 @@ import (
 
 //GetGrpcLocation - Get the location of a gRPC service
 func GetGrpcLocation(vendor string, app string) string {
-	location := "http://" + app + "." + vendor + ".intersights.io:50051"
+	location := app + "." + vendor + ".intersights.io:50051"
+	location = "127.0.0.1:50051"
 	if addr := os.Getenv("ISGRPC_" + app + "_" + vendor + "_HOST"); addr != "" {
 		location = addr
 	}
