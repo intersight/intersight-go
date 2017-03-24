@@ -1,0 +1,3 @@
+package: github.com/intersights/intersights-go
+import:
+- package: github.com/intersights/proto-go

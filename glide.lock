@@ -1,0 +1,6 @@
+hash: b97ee1c5340dfb21de16a777bbeb5cffac6cafe4fea4276fff678bb48196525c
+updated: 2017-03-24T15:32:06.36884967Z
+imports:
+- name: github.com/intersights/proto-go
+  version: 7731aeb1d0fc52488887901bcebfb329b10f00ed
+testImports: []
