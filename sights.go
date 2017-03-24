@@ -11,7 +11,9 @@ type SightSource struct {
 	//TrackerID allows an app to narrow down the source of an event e.g. specific js tracker with differing configs
 	TrackerID string `json:"t"`
 	//RequestID is a micro session the event is attached to, e.g. A single page load would have a single request ID, but many events.  Can be split with / to describe a sub request.
-	RequestID        string `json:"r"`
+	RequestID string `json:"r"`
+	//ProfileVendor - The application responsible for generating this sight
+	ProfileVendor    string `json:"pv"`
 	RequestStartTime Time `json:"rt"`
 	SourceType       SourceType `json:"st"`
 	Hostname         string `json:"h"`
@@ -27,8 +29,8 @@ type Sight struct {
 	Source    SightSource `json:"src"`
 	Type      SightType `json:"type"`
 
-	//ProfileVendor - The application responsible for generating this sight
-	ProfileVendor string `json:"pv"`
+	//ProfileNamespace - The namespace this profile exists in
+	ProfileNamespace string `json:"pn"`
 	//ProfileID - Which profile to track the sight against
 	ProfileID string `json:"p"`
 	//Data - Used for profile property sights
