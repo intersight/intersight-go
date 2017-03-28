@@ -4,10 +4,7 @@ type SourceType string
 type SightType string
 
 type SightSource struct {
-	DeviceID   string `json:"d"`
-	SessionID  string `json:"s"`
-	IdentityID string `json:"i"`
-	ProjectID  string `json:"p"`
+	ProjectID string `json:"p"`
 	//TrackerID allows an app to narrow down the source of an event e.g. specific js tracker with differing configs
 	TrackerID string `json:"t"`
 	//RequestID is a micro session the event is attached to, e.g. A single page load would have a single request ID, but many events.  Can be split with / to describe a sub request.
@@ -20,7 +17,6 @@ type SightSource struct {
 	IP               string `json:"ip"`
 	UserAgent        string `json:"ua"`
 	Interactions     map[string]int32  `json:"in"`
-	TrafficSource    TrafficSource `json:"ts"`
 }
 
 type Sight struct {

@@ -21,4 +21,6 @@ const (
 	TypeHeatmap intersights.SightType = "heatmap"
 	//TypeForm information about a form
 	TypeForm intersights.SightType = "form"
+	//TypeRelate relate a profile to another vendor/namespace/profile-id
+	TypeRelate intersights.SightType = "relate"
 )
