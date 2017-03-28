@@ -23,4 +23,6 @@ const (
 	TypeForm intersights.SightType = "form"
 	//TypeRelate relate a profile to another vendor/namespace/profile-id
 	TypeRelate intersights.SightType = "relate"
+	//TypeGeneric Undefined sight type
+	TypeGeneric intersights.SightType = "generic"
 )
