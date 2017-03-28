@@ -1,6 +1,47 @@
 hash: b97ee1c5340dfb21de16a777bbeb5cffac6cafe4fea4276fff678bb48196525c
-updated: 2017-03-24T15:32:06.36884967Z
+updated: 2017-03-28T17:31:54.022672461+01:00
 imports:
+- name: github.com/golang/protobuf
+  version: c9c7427a2a70d2eb3bafa0ab2dc163e45f143317
+  subpackages:
+  - proto
+  - ptypes
+  - ptypes/any
+  - ptypes/duration
+  - ptypes/timestamp
 - name: github.com/intersights/proto-go
-  version: 7731aeb1d0fc52488887901bcebfb329b10f00ed
+  version: 91dc40a65772c2e09669c2f5686ba82b07a46910
+  subpackages:
+  - pbsights
+- name: golang.org/x/net
+  version: 6c23252515492caf9b228a9d5cabcdbde29f7f82
+  subpackages:
+  - context
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - lex/httplex
+  - trace
+- name: golang.org/x/text
+  version: fc7fa097411d30e6708badff276c4c164425590c
+  subpackages:
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
+- name: google.golang.org/grpc
+  version: cdee119ee21e61eef7093a41ba148fa83585e143
+  subpackages:
+  - codes
+  - credentials
+  - grpclog
+  - internal
+  - keepalive
+  - metadata
+  - naming
+  - peer
+  - stats
+  - tap
+  - transport
 testImports: []

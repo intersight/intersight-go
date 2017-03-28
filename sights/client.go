@@ -79,15 +79,18 @@ func (c Client) Write(ctx context.Context, sight intersights.Sight) (*pbsights.S
 	case TypeForm:
 		sightType = pbsights.SightType_Form
 		break
+	case TypeRelate:
+		sightType = pbsights.SightType_Relate
+		break
+	case TypeGeneric:
+		sightType = pbsights.SightType_Generic
+		break
 	}
 
 	ps := &pbsights.Sight{
 		ProfileNamespace: sight.ProfileNamespace,
 		ProfileId:        sight.ProfileID,
 		Source: &pbsights.SightSource{
-			DeviceId:         sight.Source.DeviceID,
-			SessionId:        sight.Source.SessionID,
-			IdentityId:       sight.Source.IdentityID,
 			TrackerId:        sight.Source.TrackerID,
 			RequestId:        sight.Source.RequestID,
 			ProfileVendor:    sight.Source.ProfileVendor,
@@ -97,16 +100,6 @@ func (c Client) Write(ctx context.Context, sight intersights.Sight) (*pbsights.S
 			UserAgent:        sight.Source.UserAgent,
 			Interactions:     sight.Source.Interactions,
 			RequestStartTime: rst,
-			TrafficSource: &pbsights.TrafficSource{
-				Source:      sight.Source.TrafficSource.Source,
-				Channel:     string(sight.Source.TrafficSource.Channel),
-				SubChannel:  sight.Source.TrafficSource.SubChannel,
-				Campaign:    sight.Source.TrafficSource.Campaign,
-				Term:        sight.Source.TrafficSource.Term,
-				Creative:    sight.Source.TrafficSource.Creative,
-				Offer:       sight.Source.TrafficSource.Offer,
-				TrackingIds: sight.Source.TrafficSource.TrackingIDs,
-			},
 		},
 		Time:       st,
 		Type:       sightType,
