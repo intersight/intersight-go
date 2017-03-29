@@ -95,6 +95,7 @@ func (c Client) Write(ctx context.Context, sight intersights.Sight) (*pbsights.S
 			RequestId:        sight.Source.RequestID,
 			ProfileVendor:    sight.Source.ProfileVendor,
 			SourceType:       sourceType,
+			SourceEntry:      sight.Source.SourceEntry,
 			Hostname:         sight.Source.Hostname,
 			Ip:               sight.Source.IP,
 			UserAgent:        sight.Source.UserAgent,

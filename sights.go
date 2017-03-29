@@ -13,10 +13,12 @@ type SightSource struct {
 	ProfileVendor    string `json:"pv"`
 	RequestStartTime Time `json:"rt"`
 	SourceType       SourceType `json:"st"`
-	Hostname         string `json:"h"`
-	IP               string `json:"ip"`
-	UserAgent        string `json:"ua"`
-	Interactions     map[string]int32  `json:"in"`
+	//SourceEntry entry point for the source e.g. URL, Phone Number
+	SourceEntry  string `json:"se"`
+	Hostname     string `json:"h"`
+	IP           string `json:"ip"`
+	UserAgent    string `json:"ua"`
+	Interactions map[string]int32  `json:"in"`
 }
 
 type Sight struct {
