@@ -35,6 +35,8 @@ type Sight struct {
 	Data map[string]string `json:"d"`
 	//Meta - Used for any meta not defined
 	Meta map[string]string `json:"m"`
+	//Lookup properties to reference back to the profile, e.g. email, phone, ip
+	Lookup map[string]string `json:"l"`
 	//JsonLd - Used to describe the sight
 	JsonLd string `json:"ld"`
 }

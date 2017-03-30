@@ -1,5 +1,5 @@
 hash: b97ee1c5340dfb21de16a777bbeb5cffac6cafe4fea4276fff678bb48196525c
-updated: 2017-03-29T21:53:31.106743967+01:00
+updated: 2017-03-30T16:59:31.854105135+01:00
 imports:
 - name: github.com/golang/protobuf
   version: c9c7427a2a70d2eb3bafa0ab2dc163e45f143317
@@ -10,7 +10,7 @@ imports:
   - ptypes/duration
   - ptypes/timestamp
 - name: github.com/intersights/proto-go
-  version: d8a16c2196553470357dd36ca4fa3dfdea38b208
+  version: 7606bbf63b38d7462c1c302c9a9208211ae02f5e
   subpackages:
   - pbsights
 - name: golang.org/x/net
@@ -24,14 +24,14 @@ imports:
   - lex/httplex
   - trace
 - name: golang.org/x/text
-  version: fc7fa097411d30e6708badff276c4c164425590c
+  version: 3aa6d803466d99ea1bdf4af99e6db53299c02bd7
   subpackages:
   - secure/bidirule
   - transform
   - unicode/bidi
   - unicode/norm
 - name: google.golang.org/grpc
-  version: cdee119ee21e61eef7093a41ba148fa83585e143
+  version: 7fc29d0caa400efc53212b222356f99efe87d7d5
   subpackages:
   - codes
   - credentials

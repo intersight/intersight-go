@@ -107,6 +107,7 @@ func (c Client) Write(ctx context.Context, sight intersights.Sight) (*pbsights.S
 		JsonLd:     sight.JsonLd,
 		Properties: sight.Data,
 		Meta:       sight.Meta,
+		Lookups:    sight.Lookup,
 	}
 
 	return c.c.Write(ctx, ps)
